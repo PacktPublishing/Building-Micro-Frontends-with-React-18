@@ -1,0 +1,8 @@
+{
+  "/catalog": {
+    "target": "http://localhost:4200"
+  },
+  "/checkout": {
+    "target": "http://localhost:4201"
+  }
+}
