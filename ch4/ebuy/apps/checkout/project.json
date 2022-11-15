@@ -48,12 +48,12 @@
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "checkout:build",
-        "hmr": true
+        "hmr": true,
+        "port": 4201
       },
       "configurations": {
         "development": {
           "buildTarget": "checkout:build:development",
-          "port": 4201,
           "baseHref": "/checkout/"
         },
         "production": {
