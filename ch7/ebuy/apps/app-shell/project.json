@@ -1,0 +1,101 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/app-shell/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/app-shell",
+        "index": "apps/app-shell/src/index.html",
+        "baseHref": "/",
+        "main": "apps/app-shell/src/main.ts",
+        "polyfills": "apps/app-shell/src/polyfills.ts",
+        "tsConfig": "apps/app-shell/tsconfig.app.json",
+        "assets": [
+          "apps/app-shell/src/favicon.ico",
+          "apps/app-shell/src/assets"
+        ],
+        "styles": ["apps/app-shell/src/styles.css"],
+        "scripts": [],
+        "webpackConfig": "apps/app-shell/webpack.config.js"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/app-shell/src/environments/environment.ts",
+              "with": "apps/app-shell/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "webpackConfig": "apps/app-shell/webpack.config.prod.js"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/react:module-federation-dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "app-shell:build",
+        "hmr": true,
+        "port": 4200
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "app-shell:build:development"
+        },
+        "production": {
+          "buildTarget": "app-shell:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/app-shell/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/app-shell"],
+      "options": {
+        "jestConfig": "apps/app-shell/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "serve-static": {
+      "executor": "@nrwl/web:file-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "app-shell:build",
+        "port": 4200
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "app-shell:build:development"
+        },
+        "production": {
+          "buildTarget": "app-shell:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}

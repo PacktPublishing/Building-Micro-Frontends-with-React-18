@@ -1,0 +1,27 @@
+{
+  "projects": {
+    "default": "ebuy-90233"
+  },
+  "targets": {
+    "ebuy-90233": {
+      "hosting": {
+        "catalog": [
+          "ebuy-catalog1"
+        ],
+        "checkout": [
+          "ebuy-checkout1"
+        ],
+        "app-shell": [
+          "ebuy-appshell"
+        ],
+        "recommendations": [
+          "ebuy-recommendations1"
+        ],
+        "store": [
+          "ebuy-store1"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
