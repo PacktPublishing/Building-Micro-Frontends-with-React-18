@@ -34,7 +34,7 @@
       ],
       "headers": [
         {
-          "source": "**/*.@(eot|otf|ttf|ttc|woff|js|font.css|remoteEntry.js)",
+          "source": "**/*.@(eot|otf|ttf|ttc|woff|woff2|js|font.css|remoteEntry.js)",
           "headers": [
             {
               "key": "Access-Control-Allow-Origin",

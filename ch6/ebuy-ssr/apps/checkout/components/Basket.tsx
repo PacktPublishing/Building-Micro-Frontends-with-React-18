@@ -16,7 +16,7 @@ export function ShoppingBasket(basketListData: any) {
 
         <Table.Body>
           {basketList.map((basketItem: any) => (
-            <Table.Row>
+            <Table.Row key={basketItem.id}>
               <Table.Cell>
                 <Image src={basketItem.image} rounded size="mini" />
               </Table.Cell>
