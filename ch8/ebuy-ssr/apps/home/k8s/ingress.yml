@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: home
+  namespace: default
+  labels:
+    app: home
+  annotations:
+    # nginx.ingress.kubernetes.io/enable-cors: 'true'
+    # nginx.ingress.kubernetes.io/cors-allow-origin: '*'
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  ingressClassName: nginx
+  rules:
+    - http:
+        paths:
+          - path: /home(/|$)(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: home
+                port:
+                  number: 80

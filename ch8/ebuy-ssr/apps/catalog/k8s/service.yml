@@ -1,0 +1,16 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: catalog
+  namespace: default
+  labels:
+    app: catalog
+spec:
+  type: LoadBalancer
+  selector:
+    app: catalog
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+      name: catalog

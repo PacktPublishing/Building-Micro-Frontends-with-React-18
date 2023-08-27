@@ -1,0 +1,16 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: checkout
+  namespace: default
+  labels:
+    app: checkout
+spec:
+  type: LoadBalancer
+  selector:
+    app: checkout
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+      name: checkout

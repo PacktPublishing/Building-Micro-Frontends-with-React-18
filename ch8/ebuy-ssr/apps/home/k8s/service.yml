@@ -1,0 +1,16 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: home
+  namespace: default
+  labels:
+    app: home
+spec:
+  type: LoadBalancer
+  selector:
+    app: home
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+      name: home
