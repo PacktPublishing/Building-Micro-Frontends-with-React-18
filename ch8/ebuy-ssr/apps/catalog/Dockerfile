@@ -43,4 +43,4 @@ COPY --from=installer --chown=nextjs:nodejs /app/apps/catalog/.next/standalone .
 COPY --from=installer --chown=nextjs:nodejs /app/apps/catalog/.next/static ./apps/catalog/.next/static
 COPY --from=installer --chown=nextjs:nodejs /app/apps/catalog/public ./apps/catalog/public
 
-CMD node server.js
+CMD node apps/catalog/server.js

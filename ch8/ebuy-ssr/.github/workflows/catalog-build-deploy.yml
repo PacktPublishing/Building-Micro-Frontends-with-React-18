@@ -1,11 +1,11 @@
 name: catalog-build-deploy
 on:
-  workflow_dispatch
-  # push:
-  #   branches:
-  #     - main
-  #   paths:
-  #     - apps/catalog/**
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - apps/catalog/**
 
 jobs:
   build-and-deploy:

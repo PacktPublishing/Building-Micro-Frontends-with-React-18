@@ -1,11 +1,11 @@
 name: checkout-build-deploy
 on:
-  workflow_dispatch
-  # push:
-  #   branches:
-  #     - main
-  #   paths:
-  #     - apps/checkout/**
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - apps/checkout/**
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest

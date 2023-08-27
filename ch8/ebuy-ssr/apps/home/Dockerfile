@@ -26,6 +26,7 @@ COPY --from=builder /app/out/full/ ./
 COPY turbo.json turbo.json
 RUN ENV=PROD pnpm turbo run build --filter=home...
 
+
 FROM base AS runner
 WORKDIR /app
 
@@ -37,10 +38,10 @@ USER nextjs
 COPY --from=installer /app/apps/home/next.config.js .
 COPY --from=installer /app/apps/home/package.json .
 
-# Automatically leverage output traces to reduce image size
-# https://nextjs.org/docs/advanced-features/output-file-tracing
+# # Automatically leverage output traces to reduce image size
+# # https://nextjs.org/docs/advanced-features/output-file-tracing
 COPY --from=installer --chown=nextjs:nodejs /app/apps/home/.next/standalone ./
 COPY --from=installer --chown=nextjs:nodejs /app/apps/home/.next/static ./apps/home/.next/static
 COPY --from=installer --chown=nextjs:nodejs /app/apps/home/public ./apps/home/public
 
-CMD node server.js
+CMD node apps/home/server.js

@@ -1,4 +1,5 @@
 const NextFederationPlugin = require("@module-federation/nextjs-mf");
+const path = require("path");
 // this enables you to use import() and the webpack parser
 // loading remotes on demand, not ideal for SSR
 const remotes = (isServer) => {
@@ -7,7 +8,7 @@ const remotes = (isServer) => {
 
   const CATALOG_URL_LOCAL = "http://localhost:3001";
 
-  const CATALOG_URL_PROD = "http://<your-k8s-ip-address>/catalog";
+  const CATALOG_URL_PROD = "http:/<your-k8s-ip-address>/";
 
   const CATALOG_REMOTE_HOST =
     ENV === "PROD" ? CATALOG_URL_PROD : CATALOG_URL_LOCAL;
@@ -18,6 +19,10 @@ const remotes = (isServer) => {
 };
 module.exports = {
   output: "standalone",
+  basePath: "/catalog",
+  experimental: {
+    outputFileTracingRoot: path.join(__dirname, "../../"),
+  },
   webpack(config, options) {
     config.plugins.push(
       new NextFederationPlugin({

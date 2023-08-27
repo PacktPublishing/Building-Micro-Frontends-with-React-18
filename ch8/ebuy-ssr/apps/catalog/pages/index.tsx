@@ -5,7 +5,6 @@ import { PRODUCT_LIST_MOCKS } from "../mocks/product-list-mocks";
 export function ProductList() {
   return (
     <>
-      <p>Hello</p>
       <Card.Group>
         {PRODUCT_LIST_MOCKS.map((product) => (
           <ProductCard key={product.id} product={product} />

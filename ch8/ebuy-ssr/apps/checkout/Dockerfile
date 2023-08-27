@@ -43,4 +43,4 @@ COPY --from=installer --chown=nextjs:nodejs /app/apps/checkout/.next/standalone 
 COPY --from=installer --chown=nextjs:nodejs /app/apps/checkout/.next/static ./apps/checkout/.next/static
 COPY --from=installer --chown=nextjs:nodejs /app/apps/checkout/public ./apps/checkout/public
 
-CMD node server.js
+CMD node apps/checkout/server.js
