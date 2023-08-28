@@ -8,8 +8,8 @@ const remotes = (isServer) => {
   const CATALOG_URL_LOCAL = "http://localhost:3001";
   const CHECKOUT_URL_LOCAL = "http://localhost:3002";
 
-  const CATALOG_URL_PROD = "http://<your-k8s-ip-address>/catalog";
-  const CHECKOUT_URL_PROD = "http://<your-k8s-ip-address>/checkout";
+  const CATALOG_URL_PROD = "http://<your-k8s-ip-address>";
+  const CHECKOUT_URL_PROD = "http://<your-k8s-ip-address>";
 
   const CATALOG_REMOTE_HOST =
     ENV === "PROD" ? CATALOG_URL_PROD : CATALOG_URL_LOCAL;

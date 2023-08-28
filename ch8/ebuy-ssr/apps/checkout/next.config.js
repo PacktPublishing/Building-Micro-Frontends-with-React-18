@@ -19,7 +19,6 @@ const remotes = (isServer) => {
 };
 module.exports = {
   output: "standalone",
-  basePath: "/checkout",
   experimental: {
     outputFileTracingRoot: path.join(__dirname, "../../"),
   },
