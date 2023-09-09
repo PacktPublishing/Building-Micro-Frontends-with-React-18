@@ -4,7 +4,7 @@ export function ShoppingBasket(basketListData: any) {
   const { basketList } = basketListData;
   return (
     <Container textAlign="center">
-      <Table basic="very" rowed>
+      <Table basic="very" rowed="true">
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell>Items</Table.HeaderCell>
@@ -18,7 +18,7 @@ export function ShoppingBasket(basketListData: any) {
           {basketList.map((basketItem: any) => (
             <Table.Row key={basketItem.id}>
               <Table.Cell>
-                <Image src={basketItem.image} rounded size="mini" />
+                <Image alt={basketItem.title} src={basketItem.image} rounded size="mini" />
               </Table.Cell>
               <Table.Cell> {basketItem.title}</Table.Cell>
               <Table.Cell>{basketItem.quantity || 0}</Table.Cell>

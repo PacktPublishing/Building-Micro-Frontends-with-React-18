@@ -6,7 +6,7 @@ export function ProductCard(productData: any) {
   return (
     <Card>
       <Card.Content>
-        <Image src={product.image} />
+        <Image alt={product.title} src={product.image} />
         <Card.Header>{product.title}</Card.Header>
         <Card.Description>{product.description}</Card.Description>
         <Card.Header>${product.price}</Card.Header>
