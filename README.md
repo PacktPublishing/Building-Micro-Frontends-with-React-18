@@ -30,13 +30,30 @@ This book is for intermediate- to advanced-level developers with a working knowl
 
 With the following software and hardware list you can run all code files present in the book (Chapter 1-44937).
 ### Software and Hardware List
+_NOTE_: 256 GB is a recommended amount for the full course of the book and for general development ease, not a strict minimum for getting started
+
 | Chapter | Software required | OS required |
 | -------- | ------------------------------------ | ----------------------------------- |
 | 1-11 | React 18 | Windows, Mac OS X, and Linux (Any) |
 | 1-11 | TypeScript 3.7 | Windows, Mac OS X, and Linux (Any) |
 | 1-11 | Docker Engine 24 | Windows, Mac OS X, and Linux (Any) |
 
-
+## Errata
+* Page 6 (Figure 1.1 ): **...productivity with SPAs drop significantly, while productivity drop with microfrontends is minimal** _should be_ **...productivity with SPAs drops significantly, while the productivity drop with microfrontends is minimal**
+* Page 13 ("Hello World with Microfrontends" Coding Exercise, Step 2):
+  **Missing line breaks in the commands:**
+  ```bash
+  cd my-store
+  pnpm create-next-app@12
+* Page 13 ("Hello World with Microfrontends" - Coding Exercise, Step 2): **Note:** **_Readers are advised to use the `npx` command for creating the Next.js apps, as this is the more robust approach in this context_**
+* Page 40 ("Creating a new app with Nx Console", Step 4 (Port Change)): **If the Nx Console UI for changing the port is unavailable, use the command `nx serve --port=4201` or edit the `project.json` file to manually set the port.**
+* Page 53 (Step 8): **.../src/spp/app.tsx file...** _should be_ **.../src/app/app.tsx file...**
+* Page 53 (Step 10): **We will make the same changes...** _should be_ **We make the same changes...**
+* Page 55 (Paragph 2 below code block 1, line 1): **the development configuration under the serve object...** _should be_ **under the serve object...**
+* Page 63 ("Setting up a Global Shared State" Heading, line 6 ): **Index-db** _should be_ **IndexedDB**
+* Page 67 (Code block 2): **`pnpn i usehook-ts`** _should be_ **`pnpm i usehooks-ts`**
+* Page 70 (Paragraph 1, line 1): **...`useEffects` and `eventListeners`...** _should be_ **...`useEffect` and `useEventListener`...**
+  
 ### Related products
 * React Key Concepts [[Packt]](https://www.packtpub.com/product/react-key-concepts/9781803234502) [[Amazon]](https://www.amazon.com/dp/1803234504)
 
