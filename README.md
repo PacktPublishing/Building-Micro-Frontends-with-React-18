@@ -49,8 +49,8 @@ _NOTE_: 256 GB is a recommended amount for the full course of the book and for g
 * Page 40 ("Creating a new app with Nx Console", Step 4 (Port Change)): **If the Nx Console UI for changing the port is unavailable, use the command `nx serve --port=4201` or edit the `project.json` file to manually set the port.**
 * Page 53 (Step 8): **.../src/spp/app.tsx file...** _should be_ **.../src/app/app.tsx file...**
 * Page 53 (Step 10): **We will make the same changes...** _should be_ **We make the same changes...**
-* Page 55 (Paragph 2 below code block 1, line 1): **the development configuration under the serve object...** _should be_ **under the serve object...**
-* Page 63 ("Setting up a Global Shared State" Heading, line 6 ): **Index-db** _should be_ **IndexedDB**
+* Page 55 (Paragraph 2 below code block 1, line 1): **the development configuration under the serve object...** _should be_ **under the serve object...**
+* Page 63 ("Setting up a Global Shared State", paragraph 1, line 6 ): **Index-db** _should be_ **IndexedDB**
 * Page 67 (Code block 2): **`pnpn i usehook-ts`** _should be_ **`pnpm i usehooks-ts`**
 * Page 70 (Paragraph 1, line 1): **...`useEffects` and `eventListeners`...** _should be_ **...`useEffect` and `useEventListener`...**
   
