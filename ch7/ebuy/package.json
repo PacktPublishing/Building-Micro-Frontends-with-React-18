@@ -28,7 +28,7 @@
     "@nrwl/eslint-plugin-nx": "14.7.5",
     "@nrwl/jest": "14.7.5",
     "@nrwl/linter": "14.7.5",
-    "@nrwl/react": "14.7.5",
+    "@nrwl/react": "14.8.6",
     "@nrwl/web": "14.7.5",
     "@nrwl/workspace": "14.7.5",
     "@testing-library/react": "13.3.0",
